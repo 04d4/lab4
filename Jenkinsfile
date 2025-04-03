@@ -1,6 +1,6 @@
 pipeline {
     tools {
-        nodejs 'nodejs780'
+        nodejs 'nodejs'
     }
     agent any
     stages {
