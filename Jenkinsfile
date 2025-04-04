@@ -1,7 +1,7 @@
 pipeline {
     tools {
         nodejs 'nodejs-23.11.0'
-        git 'default'
+        git 'Default'
     }
     agent any
     stages {
