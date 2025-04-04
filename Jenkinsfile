@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy to staging'
-                sh 'echo "Hello" > rez.txt'
+                sh 'echo "Hello" >> rez.txt'
             }
         }
     }
