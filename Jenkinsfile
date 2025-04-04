@@ -1,6 +1,6 @@
 pipeline {
     tools {
-        nodejs 'nodejs'
+        nodejs 'nodejs-23.11.0'
         git 'default'
     }
     agent any
