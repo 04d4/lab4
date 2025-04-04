@@ -22,6 +22,11 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo "Deploy to staging..."
+            }
+        }
     }
 }
 
