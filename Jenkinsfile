@@ -1,10 +1,18 @@
 /* groovylint-disable-next-line CompileStatic */
 pipeline {
+
+    agent {
+        docker {
+            image 'node:lts-buster-slim'
+            args '-p 3000:3000'
+        }
+    }
     tools {
         nodejs 'nodejs-23.11.0'
         git 'Default'
     }
     environment {
+        CI = 'true'
         APP_NAME = 'lab4-application'
         APP_VERSION = '1.0.0'
         FILE_NAME_1 = 'output/info_build.txt'
