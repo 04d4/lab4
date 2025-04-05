@@ -17,7 +17,6 @@ pipeline {
         APP_VERSION = '1.0.0'
         FILE_NAME_1 = 'output/info_build.txt'
     }
-    agent any
     stages {
         stage('Build') {
             steps {
