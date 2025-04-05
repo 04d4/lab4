@@ -26,6 +26,8 @@ pipeline {
             steps {
                 echo 'Deploy to staging'
                 sh 'echo "Hello" >> rez.txt'
+                sh 'env >> info_env.txt'
+                sh 'set >> info_set.txt'
             }
         }
     }
