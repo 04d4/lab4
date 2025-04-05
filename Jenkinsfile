@@ -43,7 +43,7 @@ pipeline {
         stage('Artifacts') {
             steps {
                 // Archive the build output artifacts.
-                archiveArtifacts artifacts: 'output/*.txt', exclude: 'output/*.log'
+                archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.log'
             }
         }
     }
