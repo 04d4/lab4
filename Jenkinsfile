@@ -36,6 +36,7 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent any
             steps {
                 echo 'Deploy to staging'
                 sh 'mkdir -p output'
@@ -45,6 +46,7 @@ pipeline {
                 writeFile file: 'output/usefulFile.txt', text: 'This is useful, need to archive it.'
                 sh 'echo "BUILD_ID: $BUILD_ID" > $FILE_NAME_1'
                 sh 'echo "BUILD_TAG: $BUILD_TAG" >> $FILE_NAME_1'
+                sh 'docker --version'
             }
         }
         stage('Artifacts') {
